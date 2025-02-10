@@ -26,8 +26,8 @@
             alert("searching in progress"); 
             document.getElementById("weather-result").innerHTML = "Weather info for  "+city+ " is unavailable";
             const value = document.getElementById("weather-result").innerHTML;
-            const apiKey = `7a08c4955f8623bf7fb6b577002c9381`;
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+            const apiKey = API_KEY;
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
             .then (function(response){
                 return response.json();
             })
